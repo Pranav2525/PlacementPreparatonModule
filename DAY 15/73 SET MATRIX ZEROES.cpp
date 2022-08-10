@@ -1,0 +1,41 @@
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+     int i,j,k,m,n;
+      m=matrix.size();
+      n=matrix[0].size();
+      for(i=0;i<m;i++)
+      {
+       for(j=0;j<n;j++)
+       {
+        if(matrix[i][j]==0)
+        {
+         for(k=0;k<m;k++)
+         {
+          if(matrix[k][j]!=0)
+          {
+           matrix[k][j]=1e9;
+          }
+         }
+         for(k=0;k<n;k++)
+         {
+          if(matrix[i][k]!=0)
+          {
+           matrix[i][k]=1e9;
+          }
+         }
+        }
+       }
+      }
+      for(i=0;i<m;i++)
+      {
+       for(j=0;j<n;j++)
+       {
+        if(matrix[i][j]==1e9)
+        {
+         matrix[i][j]=0;
+        }
+       }
+      }
+    }
+};

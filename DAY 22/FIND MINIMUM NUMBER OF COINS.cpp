@@ -1,0 +1,51 @@
+int findMinimumCoins(int amount) 
+{
+    // Write your code here
+    int count=0;
+    while(amount>=1000)
+    {
+     amount-=1000;
+     count++;
+    }
+    while(amount>=500)
+    {
+     amount-=500;
+     count++;
+    }
+    while(amount>=100)
+    {
+     amount-=100;
+     count++;
+    }
+    while(amount>=50)
+    {
+     amount-=50;
+     count++;
+    }
+    while(amount>=20)
+    {
+     amount-=20;
+     count++;
+    }
+    while(amount>=10)
+    {
+     amount-=10;
+     count++;
+    }
+    while(amount>=5)
+    {
+     amount-=5;
+     count++;
+    }
+    while(amount>=2)
+    {
+     amount-=2;
+     count++;
+    }
+    while(amount>=1)
+    {
+     amount-=1;
+     count++;
+    }
+    return count;
+}
